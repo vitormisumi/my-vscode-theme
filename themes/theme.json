@@ -173,7 +173,7 @@
     "symbolIcon.colorForeground": "#ffffff",
     "symbolIcon.constructorForeground": "#44ffdd",
     "symbolIcon.enumeratorForeground": "#aa44ff",
-    "symbolIcon.enumeratorMemberForeground": "#ffffff",
+    "symbolIcon.enumeratorMemberForeground": "#ff44aa",
     "symbolIcon.eventForeground": "#6e7681",
     "symbolIcon.fieldForeground": "#ffffff",
     "symbolIcon.fileForeground": "#d29922",
@@ -186,18 +186,18 @@
     "symbolIcon.moduleForeground": "#ffdd44",
     "symbolIcon.namespaceForeground": "#ffdd44",
     "symbolIcon.nullForeground": "#ff4444",
-    "symbolIcon.numberForeground": "#ffffff",
+    "symbolIcon.numberForeground": "#ff44aa",
     "symbolIcon.objectForeground": "#aa44ff",
     "symbolIcon.operatorForeground": "#ffffff",
     "symbolIcon.packageForeground": "#44ffdd",
     "symbolIcon.propertyForeground": "#ffffff",
-    "symbolIcon.referenceForeground": "#ffffff",
+    "symbolIcon.referenceForeground": "#ff44aa",
     "symbolIcon.snippetForeground": "#ffffff",
     "symbolIcon.stringForeground": "#44ff44",
     "symbolIcon.structForeground": "#aa44ff",
     "symbolIcon.textForeground": "#44ff44",
     "symbolIcon.typeParameterForeground": "#aa44ff",
-    "symbolIcon.unitForeground": "#ffffff",
+    "symbolIcon.unitForeground": "#ff44aa",
     "symbolIcon.variableForeground": "#ffffff",
     "symbolIcon.constantForeground": [
       "#aff5b4",
@@ -228,13 +228,13 @@
     "terminal.ansiBrightMagenta": "#d2a8ff",
     "terminal.ansiBrightCyan": "#56d4dd",
     "terminal.ansiBrightWhite": "#ffffff",
-    "editorBracketHighlight.foreground1": "#79c0ff",
-    "editorBracketHighlight.foreground2": "#56d364",
-    "editorBracketHighlight.foreground3": "#e3b341",
-    "editorBracketHighlight.foreground4": "#ffa198",
-    "editorBracketHighlight.foreground5": "#ff9bce",
-    "editorBracketHighlight.foreground6": "#d2a8ff",
-    "editorBracketHighlight.unexpectedBracket.foreground": "#7d8590",
+    "editorBracketHighlight.foreground1": "#4488ff",
+    "editorBracketHighlight.foreground2": "#44ff44",
+    "editorBracketHighlight.foreground3": "#ffdd44",
+    "editorBracketHighlight.foreground4": "#ff8844",
+    "editorBracketHighlight.foreground5": "#44ffdd",
+    "editorBracketHighlight.foreground6": "#aa44ff",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#ff4444",
     "gitDecoration.addedResourceForeground": "#3fb950",
     "gitDecoration.modifiedResourceForeground": "#ffdd44",
     "gitDecoration.deletedResourceForeground": "#f85149",
@@ -265,13 +265,27 @@
   "semanticTokenColors": {
     "class:svelte": "#44ffdd",
     "class.readonly:svelte": "#44ffdd",
-    "type.readonly:svelte": "#44ffdd"
+    "type.readonly:svelte": "#44ffdd",
+    "property": "#44ffdd",
+    "property.readonly": "#44ffdd"
   },
   "tokenColors": [
     {
       "scope": ["comment", "punctuation.definition.comment", "string.comment"],
       "settings": {
         "foreground": "#8b949e"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.separator",
+        "punctuation.terminator",
+        "punctuation.delimiter",
+        "meta.brace",
+        "meta.bracket"
+      ],
+      "settings": {
+        "foreground": "#cccccc"
       }
     },
     {
@@ -302,7 +316,7 @@
         "entity"
       ],
       "settings": {
-        "foreground": "#ffffff"
+        "foreground": "#ff44aa"
       }
     },
     {
@@ -312,7 +326,7 @@
         "meta.definition.variable"
       ],
       "settings": {
-        "foreground": "#ffffff"
+        "foreground": "#ff44aa"
       }
     },
     {
@@ -446,9 +460,33 @@
       }
     },
     {
+      "scope": [
+        "variable.other.object.property",
+        "meta.object-literal.key",
+        "variable.other.property",
+        "support.variable.property",
+        "meta.object.member",
+        "variable.object.property"
+      ],
+      "settings": {
+        "foreground": "#44ffdd"
+      }
+    },
+    {
       "scope": "variable",
       "settings": {
         "foreground": "#ffffff"
+      }
+    },
+    {
+      "scope": [
+        "meta.member.access.ts variable",
+        "meta.member.access.js variable",
+        "variable.other.object",
+        "meta.object-binding-pattern-variable variable"
+      ],
+      "settings": {
+        "foreground": "#44ffdd"
       }
     },
     {
@@ -503,7 +541,7 @@
     {
       "scope": "string variable",
       "settings": {
-        "foreground": "#ffffff"
+        "foreground": "#ff44aa"
       }
     },
     {
@@ -533,7 +571,7 @@
     {
       "scope": "support.constant",
       "settings": {
-        "foreground": "#ffffff"
+        "foreground": "#ff44aa"
       }
     },
     {
@@ -551,20 +589,20 @@
     {
       "scope": "meta.module-reference",
       "settings": {
-        "foreground": "#ffffff"
+        "foreground": "#ff44aa"
       }
     },
     {
       "scope": "punctuation.definition.list.begin.markdown",
       "settings": {
-        "foreground": "#ffffff"
+        "foreground": "#ff44aa"
       }
     },
     {
       "scope": ["markup.heading", "markup.heading entity.name"],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#ffffff"
+        "foreground": "#ff44aa"
       }
     },
     {
@@ -602,7 +640,7 @@
     {
       "scope": "markup.inline.raw",
       "settings": {
-        "foreground": "#ffffff"
+        "foreground": "#ff44aa"
       }
     },
     {
@@ -637,14 +675,14 @@
       "scope": ["markup.changed", "punctuation.definition.changed"],
       "settings": {
         "background": "#5a1e02",
-        "foreground": "#ffffff"
+        "foreground": "#ff44aa"
       }
     },
     {
       "scope": ["markup.ignored", "markup.untracked"],
       "settings": {
         "foreground": "#161b22",
-        "background": "#ffffff"
+        "background": "#ff44aa"
       }
     },
     {
@@ -657,20 +695,20 @@
     {
       "scope": "meta.diff.header",
       "settings": {
-        "foreground": "#ffffff"
+        "foreground": "#ff44aa"
       }
     },
     {
       "scope": "meta.separator",
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#ffffff"
+        "foreground": "#ff44aa"
       }
     },
     {
       "scope": "meta.output",
       "settings": {
-        "foreground": "#ffffff"
+        "foreground": "#ff44aa"
       }
     },
     {
@@ -683,7 +721,7 @@
         "brackethighlighter.quote"
       ],
       "settings": {
-        "foreground": "#8b949e"
+        "foreground": "#cccccc"
       }
     },
     {
